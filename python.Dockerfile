@@ -17,8 +17,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # running Flask as a module
-CMD ["sh", "-c", "sleep 5 \ 
-    && flask db init \ 
+CMD ["sh", "-c", "flask db init \ 
     && flask db migrate \
     && flask db upgrade \ 
     && flask run"]
