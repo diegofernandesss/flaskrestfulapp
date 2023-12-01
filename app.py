@@ -16,10 +16,7 @@ api.init_app(app)
 
 # Database
 db.init_app(app)
-migrate.init_app(app=app)
-
-with app.app_context():
-    db.create_all()
+migrate.init_app(app, db)
 
 app.register_blueprint(api_bp)
 

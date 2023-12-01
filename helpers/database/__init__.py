@@ -9,4 +9,4 @@ class Base(DeclarativeBase):
 db = SQLAlchemy(model_class=Base)
 
 # Migrate
-migrate = Migrate(db=db)
+migrate = Migrate(db)
